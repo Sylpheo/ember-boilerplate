@@ -2,7 +2,15 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  'ember-cli-bootstrap-sass': {
+    'components': false,
+    'importBootstrapJS': true
+  },
+  vendorFiles: {
+    'handlebars.js': null
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
